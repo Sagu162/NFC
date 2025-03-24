@@ -105,7 +105,7 @@ const Header = () => {
         ) : (
           // Back Button
           <motion.button
-            onClick={() => navigate(-1)}
+            onClick={() => navigate('/')}
             className="bg-secondary text-white px-4 py-2 rounded-lg shadow-button hover:bg-primary transition-colors duration-300"
             whileHover={{ scale: 1.1, color: '#FF6347' }}
             whileTap={{ scale: 0.9, color: '#FFA07A' }}
