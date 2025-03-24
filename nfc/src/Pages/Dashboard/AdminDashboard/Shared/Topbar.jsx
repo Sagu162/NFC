@@ -5,8 +5,8 @@ const TopBar = () => {
     const [isDropdownOpen, setDropdownOpen] = useState(false);
 
     return (
-        <div className="flex justify-between items-center bg-white shadow-md px-6 py-3">
-            {/* Empty div for proper alignment */}
+        <div className="flex justify-between items-center bg-widget shadow-card px-6 py-3">
+            {/* Empty div for spacing */}
             <div></div>
 
             {/* Right Side: Profile & Search Bar */}
@@ -15,30 +15,30 @@ const TopBar = () => {
                 <div className="relative">
                     <button
                         onClick={() => setDropdownOpen(!isDropdownOpen)}
-                        className="flex items-center gap-2 text-gray-700 hover:text-gray-900 transition"
+                        className="flex items-center gap-2 text-primary hover:text-heading transition"
                     >
-                        <UserCircleIcon className="w-8 h-8 text-blue-500" />
+                        <UserCircleIcon className="w-8 h-8 text-primary" />
                         <span className="hidden md:block font-medium">Admin</span>
-                        <ChevronDownIcon className="w-5 h-5 text-gray-500" />
+                        <ChevronDownIcon className="w-5 h-5 text-muted" />
                     </button>
 
                     {/* Dropdown Menu */}
                     {isDropdownOpen && (
-                        <div className="absolute right-0 mt-2 w-40 bg-white border border-gray-200 shadow-lg rounded-lg py-2">
-                            <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Profile</a>
-                            <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Settings</a>
+                        <div className="absolute right-0 mt-2 w-40 bg-widget border border-border shadow-widget rounded-lg py-2">
+                            <a href="#" className="block px-4 py-2 text-primary hover:bg-background">Profile</a>
+                            <a href="#" className="block px-4 py-2 text-primary hover:bg-background">Settings</a>
                             <a href="#" className="block px-4 py-2 text-red-500 hover:bg-red-100">Logout</a>
                         </div>
                     )}
                 </div>
 
-                {/* Search Bar (Smaller Size) */}
-                <div className="flex items-center border border-gray-300 rounded-lg px-2 py-1 w-48 bg-white shadow-sm">
-                    <MagnifyingGlassIcon className="w-5 h-5 text-gray-400" />
+                {/* Search Bar (Styled to Match Theme) */}
+                <div className="flex items-center border border-border-dark rounded-lg px-3 py-1 w-48 bg-background shadow-sm">
+                    <MagnifyingGlassIcon className="w-5 h-5 text-muted" />
                     <input
                         type="text"
                         placeholder="Search..."
-                        className="ml-2 w-full bg-transparent focus:outline-none text-gray-700 text-sm"
+                        className="ml-2 w-full bg-transparent focus:outline-none text-primary text-sm"
                     />
                 </div>
             </div>
