@@ -1,7 +1,9 @@
 import React from 'react';
+import Layout from '../Layout/Layout';
 
 const Login = () => {
     return (
+        <Layout>
         <div className="flex justify-center items-center min-h-screen bg-landing">
             <div className="bg-widget p-8 rounded-2xl shadow-card w-96">
                 <div className="flex justify-center mb-6">
@@ -28,6 +30,7 @@ const Login = () => {
                 </p>
             </div>
         </div>
+        </Layout>
     );
 };
 

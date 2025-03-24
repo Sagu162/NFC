@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import Layout from '../Layout/Layout';
 
 const Signup = () => {
     const [form, setForm] = useState({
@@ -25,6 +26,7 @@ const Signup = () => {
     };
 
     return (
+        <Layout>
         <div className="flex justify-center items-center min-h-screen bg-landing">
             <div className="bg-widget p-8 rounded-2xl shadow-modal w-96 animate-slideUp">
                 <h2 className="text-2xl text-primary-dark font-heading mb-6 text-center">Register Organization</h2>
@@ -91,6 +93,7 @@ const Signup = () => {
             </div>
             
         </div>
+        </Layout>
     );
 };
 
